@@ -1,15 +1,15 @@
-package Stage
+package iStage
 
 import (
-	"github.com/helmutkemper/iotmaker.santa_isabel_theater.platform/abstractType/genericTypes"
+	"github.com/helmutkemper/iotmaker.santa_isabel_theater.platform/dimensions"
 	"github.com/helmutkemper/iotmaker.santa_isabel_theater.platform/engine"
 )
 
 type IStage interface {
 	AddEngine(engine engine.IEngine)
 	GetEngine() engine.IEngine
-	AddToIndexList(id string, index int, dimensions genericTypes.Dimensions)
-	RemoveFromIndexList(id string) error
+	AddToIndexList(id string, index int, dimensions dimensions.Dimensions)
+	RemoveFromIndexList(id string)
 	AddToDraw(f func()) (string, int)
 	RemoveFromDraw(id string)
 	AddToCalc(f func()) (string, int)
