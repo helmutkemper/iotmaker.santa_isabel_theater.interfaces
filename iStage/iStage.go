@@ -8,9 +8,9 @@ import (
 type IStage interface {
 	AddEngine(engine engine.IEngine)
 	GetEngine() engine.IEngine
-	AddToIndexList(id string, index int, collision func(x, y float64) bool)
+	AddToIndexList(id string, index int, collision func(x, y int) bool)
 	RemoveFromIndexList(id string)
-	IsDraggable(x, y float64) string
+	IsDraggable(x, y int) string
 	AddToDraw(sprite iotmaker_santa_isabel_theater_interfaces.ISpriteDraw) (string, int)
 	RemoveFromDraw(id string)
 	AddToCalc(f func()) (string, int)
@@ -23,7 +23,7 @@ type IStage interface {
 	CursorShow()
 	SetCursorDrawFunc(function func())
 	SetCursorStageId(id string)
-	SetWidth(width float64)
-	SetHeight(height float64)
+	SetWidth(width int)
+	SetHeight(height int)
 	Clear()
 }

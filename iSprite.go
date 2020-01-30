@@ -14,5 +14,5 @@ type ISpriteDraw interface {
 	// en: Get an information about (x, y) is in element boxe
 	//
 	// pt_br: Retorna a informação se (x, y) está dentro da caxa do elemento
-	GetCollisionBox(xEvent, yEvent float64) bool
+	GetCollisionBox(xEvent, yEvent int) bool
 }
