@@ -2,17 +2,12 @@ package iStage
 
 import (
 	iotmaker_santa_isabel_theater_interfaces "github.com/helmutkemper/iotmaker.santa_isabel_theater.interfaces"
-	iotmaker_platform_IDraw "github.com/helmutkemper/iotmaker.santa_isabel_theater.platform.IDraw"
 	"github.com/helmutkemper/iotmaker.santa_isabel_theater.platform/engine"
 )
 
 type IStage interface {
 	AddEngine(engine engine.IEngine)
 	GetEngine() engine.IEngine
-	GetStage() IStage
-	GetCanvas() iotmaker_platform_IDraw.IDraw
-	GetScratchPad() iotmaker_platform_IDraw.IDraw
-	GetCache() iotmaker_platform_IDraw.IDraw
 	AddToIndexList(id string, index int, collision func(x, y int) bool)
 	RemoveFromIndexList(id string)
 	IsDraggable(x, y int) string
